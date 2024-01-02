@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-print(number)
 last = abs(number) % 10
 string = "and is greater than 5"
 if last == 0:
