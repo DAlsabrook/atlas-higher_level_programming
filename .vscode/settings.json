@@ -1,0 +1,5 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.renderWhitespace": "trailing",
+    "editor.insertSpaces": true
+}
