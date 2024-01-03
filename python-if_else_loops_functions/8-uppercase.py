@@ -7,6 +7,3 @@ def uppercase(str):
         else:
             newstr += char
     print("{}".format(newstr))
-
-string = "heLLo"
-uppercase(string)
