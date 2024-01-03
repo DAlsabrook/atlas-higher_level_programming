@@ -5,5 +5,3 @@ def print_last_digit(number):
     if number < 0:
         num = -num
     return num
-
-print(print_last_digit(-98))
