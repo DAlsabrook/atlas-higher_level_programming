@@ -1,10 +1,6 @@
 #!/usr/bin/python3
-new_in_list = __import__('4-new_in_list').new_in_list
+no_c = __import__('5-no_c').no_c
 
-list = [1]
-idx = 1
-element = 4
-new_list = new_in_list(list, idx, element)
-
-print(new_list)
-print(list)
+print(no_c("Best School"))
+print(no_c("Chicago"))
+print(no_c("C is fun!"))
