@@ -3,8 +3,8 @@ def print_matrix_integer(matrix=[[]]):
     if matrix is None:
         return
     for list in matrix:
-        for num in list:
-            print("{:d}".format(num), end="")
-            if num != list[-1]:
+        for idx, element in enumerate(list):
+            print("{:d}".format(element), end="")
+            if idx != len(list):
                 print(" ", end="")
         print("")
