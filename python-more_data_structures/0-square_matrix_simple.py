@@ -3,8 +3,5 @@
 def square_matrix_simple(matrix=[]):
     if matrix is None or not matrix:
         return matrix
-    new_matrix = []
-    for col in matrix:
-        result = list(map(lambda x: x**2, col))
-        new_matrix.append(result)
+    new_matrix = [[num * num for num in row] for row in matrix]
     return new_matrix
