@@ -1,6 +1,20 @@
-# atlas-higher_level_programming
-Hello to the world of python!
+# Repo Title
 
-This is a repository to start working with python at the atlas school.
+atlas-higher_level_programming
 
-We will be working with simple concepts such as printing to the console, string manipulation, using integers, if's, loops, data structures, classes, objects, and inheritance.
+## Description
+
+Directories containing files for practice on working with python 3.8
+
+### Directories
+
+* python-data_structures
+* python-hello_world
+* python-if_else_loops_functions
+* python-import_modules
+* python-more_data_structures
+
+## Author
+
+David Alsabrook
+@DAlsabrook
