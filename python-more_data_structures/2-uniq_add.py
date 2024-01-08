@@ -2,7 +2,7 @@
 
 def uniq_add(my_list=[]):
     if my_list is None or not my_list:
-        return None
+        return
     result = 0
     tmp_list = set(my_list)
     for number in tmp_list:
