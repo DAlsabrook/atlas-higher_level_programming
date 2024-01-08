@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 def common_elements(set_1, set_2):
     if set_1 is None or not set_1 or set_2 is None or not set_2:
