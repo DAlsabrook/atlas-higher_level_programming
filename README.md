@@ -16,5 +16,4 @@ Directories containing files for practice on working with python 3.8
 
 ## Author
 
-David Alsabrook
-@DAlsabrook
+[David Alsabrook](https://github.com/DAlsabrook)
