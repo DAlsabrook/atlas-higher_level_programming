@@ -6,4 +6,4 @@ def only_diff_elements(set_1, set_2):
     elif set_2 is None or not set_2:
         return set_1
     else:
-        return set_2.difference(set_1)
+        return set_1.difference(set_2) | set_2.difference(set_1)
