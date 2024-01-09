@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 best_score = __import__('10-best_score').best_score
 
-a_dictionary = {'John': 18, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
+a_dictionary = {'John': -18, 'Bob': 14, 'Mike': 14, 'Molly': 16, 'Adam': 10}
 best_key = best_score(a_dictionary)
 print("Best score: {}".format(best_key))
 
@@ -9,5 +9,9 @@ best_key = best_score(None)
 print("Best score: {}".format(best_key))
 
 a_dictionary = {'John': 'John', 'Bob': 'John', 'Mike': 'John'}
-best_key = best_score(None)
+best_key = best_score(a_dictionary)
+print("Best score: {}".format(best_key))
+
+a_dictionary = {'John': 0, 'Bob': 0, 'Mike': 0}
+best_key = best_score(a_dictionary)
 print("Best score: {}".format(best_key))
