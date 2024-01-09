@@ -25,6 +25,5 @@ def roman_to_int(roman_string):
             result += num
 
         prev_num = num
-
     return result
         
