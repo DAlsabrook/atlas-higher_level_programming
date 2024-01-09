@@ -12,7 +12,6 @@ def roman_to_int(roman_string):
         'D': 500,
         'M': 1000
     }
-
     result = 0
     prev_num = 0
 
