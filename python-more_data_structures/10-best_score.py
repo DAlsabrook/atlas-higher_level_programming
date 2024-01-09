@@ -3,8 +3,9 @@
 def best_score(a_dictionary):
     if a_dictionary is None or not a_dictionary:
         return
-    res = next(iter(a_dictionary.values()))
-    for value in a_dictionary.values():
-        if value > res:
-            res = value 
-    return res
+    val_check = next(iter(a_dictionary.values()))
+    string = next(iter(a_dictionary.keys()))
+    for key, value in a_dictionary.items():
+        if value > val_check:
+            string = key 
+    return string
