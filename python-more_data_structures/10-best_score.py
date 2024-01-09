@@ -6,5 +6,5 @@ def best_score(a_dictionary):
     res = 0
     for key, value in a_dictionary.items():
         if a_dictionary[key] > res:
-            res = a_dictionary[key] 
+            res = value 
     return res if res != 0 else None
