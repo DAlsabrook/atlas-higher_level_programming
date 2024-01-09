@@ -3,8 +3,5 @@
 def uniq_add(my_list=[]):
     if my_list is None or not my_list:
         return my_list
-    result = 0
-    tmp_list = set(my_list)
-    for number in tmp_list:
-        result += number
+    result = sum(set(my_list))
     return result
