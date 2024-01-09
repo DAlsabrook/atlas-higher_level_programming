@@ -6,5 +6,5 @@ def best_score(a_dictionary):
     string = next(iter(a_dictionary.keys()))
     for key, value in a_dictionary.items():
         if value > val_check:
-            string = key 
+            string = key
     return string
