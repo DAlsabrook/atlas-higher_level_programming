@@ -4,6 +4,7 @@
     "editor.insertSpaces": true,
     "editor.rulers": [79],
     "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#272727"
+        "editorRuler.foreground": "#272727",
+        "editorWhitespace.foreground": "#fd0000"
     }
 }
