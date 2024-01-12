@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Documentation for the class square"""
+
+
 class Square:
     """Attributes of the class square"""
     def __init__(self, size=0):
