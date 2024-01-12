@@ -12,7 +12,8 @@ class Square:
         self.__size = size
 
         if not all(isinstance(num, int) for num in position) \
-                    or not all(num >= 0 for num in position):
+                or not all(num >= 0 for num in position) \
+                or not isinstance(position, tuple):
             raise IndexError("position must be a tuple of 2 positive integers")
         self.__position = position
 
@@ -39,7 +40,8 @@ class Square:
     @position.setter
     def position(self, value):
         if not all(isinstance(num, int) for num in value) \
-                    or not all(num >= 0 for num in value):
+                    or not all(num >= 0 for num in value) \
+                or not isinstance(value, tuple):
             raise IndexError("position must be a tuple of 2 positive integers")
         self.__position = value
 
