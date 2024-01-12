@@ -14,7 +14,7 @@ class Square:
         if not all(isinstance(num, int) for num in position) \
                 or not all(num >= 0 for num in position) \
                 or not isinstance(position, tuple):
-            raise IndexError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
 
     """Getter for the size attribute"""
@@ -42,7 +42,7 @@ class Square:
         if not all(isinstance(num, int) for num in value) \
                 or not all(num >= 0 for num in value) \
                 or not isinstance(value, tuple):
-            raise IndexError("position must be a tuple of 2 positive integers")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     """Method that returns the square area of the square"""
