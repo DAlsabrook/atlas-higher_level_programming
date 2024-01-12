@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-'''Class for a square'''
+"""Class for defining a square"""
 class square:
-    '''Square definition'''
+    """Definition of a square"""
     def square():
-        '''pass just to show empty method'''
+        """pass just to have an empty method"""
+        pass
