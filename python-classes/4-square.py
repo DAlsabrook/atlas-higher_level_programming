@@ -13,11 +13,11 @@ class Square:
 
     def area(self):
         return self.__size ** 2
-
+    """getter"""
     @property
     def size(self):
         return self.__size
-
+    """setter"""
     @size.setter
     def size(self, value):
         if not isinstance(value, int):
