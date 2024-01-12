@@ -1,2 +1,2 @@
-class unittest(self):
+class unittest():
     pass

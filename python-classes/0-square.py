@@ -1,9 +1,5 @@
-'''Class documentation'''
+'''Class for a square'''
 class square:
-    '''class variable documentation'''
-    size = 0
-    lenght = 0
-
-    '''Method documentation'''
-    def method(var):
-        '''attribute documentation'''
+    '''Square definition'''
+    def square():
+        '''pass just to show empty method'''
