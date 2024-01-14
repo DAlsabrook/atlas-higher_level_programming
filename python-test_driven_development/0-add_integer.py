@@ -7,9 +7,6 @@ Module to run an addition function hopefully
 def add_integer(a, b=98):
     """
     Function for simple addition
-    Examples:
-        >>> add_integer(5, 5)
-        10
 
     Args:
         a (int, float): first int to use
