@@ -1,18 +1,20 @@
 #!/usr/bin/python3
-"""
-Function to add two integers together
-"""
-
-
 def add_integer(a, b=98):
     """
     Function for simple addition
+    Examples:
+        >>> add_integer(5, 5)
+        10
 
     Args:
-        a: first int to use
-        b: second int to use
+        a (int, float): first int to use
+        b (int, float): second int to use
 
-    Return: The result of addition
+    Return:
+        (int): The result of addition
+
+    Raises:
+        TypeError: if a or b are not an int or float
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
