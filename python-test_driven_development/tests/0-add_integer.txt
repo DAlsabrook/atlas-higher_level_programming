@@ -35,7 +35,7 @@ TypeError: a must be an integer
 Traceback (most recent call last):
  ...
 ValueError: cannot convert float NaN to integer
->>> add_integer(1, )
-99
 >>> add_integer(, 1)
-99
+Traceback (most recent call last):
+ ...
+SyntaxError: invalid syntax
