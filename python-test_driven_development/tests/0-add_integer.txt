@@ -1,5 +1,7 @@
 >>> add_integer = __import__('0-add_integer').add_integer
 
+Normal ints addition
+
 >>> add_integer(1, 9)
 10
 
@@ -8,6 +10,13 @@
 
 >>> add_integer(0, 0)
 0
+
+>>> add_integer(5.5, 3.3)
+8
+
+
+
+Non-ints being passed in
 
 >>> add_integer("sam", 5)
 Traceback (most recent call last):
@@ -19,28 +28,15 @@ Traceback (most recent call last):
  ...
 TypeError: b must be an integer
 
+>>> add_integer("sam", "sam")
+Traceback (most recent call last):
+ ...
+TypeError: a must be an integer
+
 >>> add_integer()
 Traceback (most recent call last):
  ...
 TypeError: add_integer() missing 1 required positional argument: 'a'
-
->>> add_integer(1, float('inf'))
-Traceback (most recent call last):
- ...
-OverflowError: cannot convert float infinity to integer
-
->>> add_integer(1, -float('inf'))
-Traceback (most recent call last):
- ...
-OverflowError: cannot convert float infinity to integer
-
->>> add_integer(5.5, 3.3)
-8
-
->>> add_integer("5", "5")
-Traceback (most recent call last):
- ...
-TypeError: a must be an integer
 
 >>> add_integer(float('nan'), 1)
 Traceback (most recent call last):
@@ -54,3 +50,16 @@ TypeError: b must be an integer
 
 >>> add_integer(1)
 99
+
+
+Infinity(+ and -) being passed in
+
+>>> add_integer(1, float('inf'))
+Traceback (most recent call last):
+ ...
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(1, -float('inf'))
+Traceback (most recent call last):
+ ...
+OverflowError: cannot convert float infinity to integer
