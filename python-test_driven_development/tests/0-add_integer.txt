@@ -51,3 +51,6 @@ ValueError: cannot convert float NaN to integer
 Traceback (most recent call last):
  ...
 TypeError: b must be an integer
+
+>>> add_integer(1)
+99
