@@ -1,10 +1,26 @@
 #!/usr/bin/python3
 """
-description for the module
+Module containing function for dividing a matrix by an int/float
 """
 
 
 def matrix_divided(matrix, div):
+    """
+    Function to divide a ful matrix by a given number
+
+    Args:
+        matrix ([[]]): Matrix of ints or floats and list of the same size
+        div (int, float): Number given to divide elements by
+
+    Return:
+        result[[]]: new matrix of divided numbers
+
+    Raises:
+        TypeError: if matrix is not a matrix of ints and floats,
+                    each list in matrix is not the same length,
+                    or div is not an int/float.
+        ZeroDivisionError: If div is 0
+    """
     result = [[]]
 
     # Check for each row of matrix being a list and
@@ -27,6 +43,6 @@ def matrix_divided(matrix, div):
     for row in matrix:
         new_row = []
         for element in row:
-            new_row.append(element / div)
+            new_row.append(round(element / div, 2))
         result.append(new_row)
     return result

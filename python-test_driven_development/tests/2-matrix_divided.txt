@@ -1,0 +1,20 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+check div is not 0
+>>> matrix_divided(matrix, 0)
+Traceback (most recent call last):
+ ...
+ZeroDivisionError("division by zero")
+
+check div is not infinite
+>>> matrix_divided(matrix, float(inf))
+
+>>> matrix_divided(matrix, -float(inf))
+
+check div is not str
+>>> matrix_divided(matrix, "string")
+Traceback (most recent call last):
+ ...
+TypeError("div must be a number")
