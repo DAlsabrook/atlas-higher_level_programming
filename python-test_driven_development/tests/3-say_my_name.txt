@@ -4,7 +4,7 @@
 My name is Gordo Stevens
 
 >>> say_my_name("Gordo")
-My name is Gordo
+My name is Gordo 
 
 >>> say_my_name(2, "Stevens")
 Traceback (most recent call last):
