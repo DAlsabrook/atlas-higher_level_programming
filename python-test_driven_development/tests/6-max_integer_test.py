@@ -14,16 +14,20 @@ class TestMaxInt(unittest.TestCase):
 
     def test_max_int_normal(self):
         list = [1, 2, 3]
-        self.assertEqual(list, 3)
+        self.assertEqual(max_integer(list), 3)
 
     def test_max_int_negative(self):
         list = [-1, -2, -3]
-        self.assertEqual(list, -3)
+        self.assertEqual(max_integer(list), -1)
 
     def test_max_int_empty(self):
-        list = [1, 2, 3]
-        self.assertFalse(list)
-    def test_max_int_none(self):
-        list = None
-        self.assertIsNone(list)
+        list = []
+        self.assertFalse(max_integer(list))
+
+#    def test_max_int_none(self):
+#        list = None
+#        self.assertIsNone(max_integer(list))
+
+if __name__ == "__main__":
+    unittest.main()
 
