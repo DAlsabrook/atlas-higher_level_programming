@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
 Module containing function for dividing a matrix by an int/float
+
 """
 
 
@@ -22,14 +23,13 @@ def matrix_divided(matrix, div):
         ZeroDivisionError: If div is 0
     """
     result = [[]]
-
+    message = "matrix must be a matrix (list of lists) of integers/floats"
     # Check for each row of matrix being a list and
     # all elements in rows being an int or float
     if not all(isinstance(row, list) for row in matrix) or \
             not all(isinstance(element, (int, float)) \
                     for rows in matrix for element in rows):
-        raise TypeError("matrix must be a matrix (list of lists) \
-                        of integers/floats")
+        raise TypeError(message)
     # Check if each row of matrix is the same length
     if not all(len(row) == len(matrix[0]) for row in matrix):
         raise TypeError("Each row of the matrix must have the same size")
