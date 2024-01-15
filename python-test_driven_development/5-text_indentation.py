@@ -27,4 +27,6 @@ def text_indentation(text):
             new_str += char + "\n\n"
         else:
             new_str += char
-    print(new_str)
+    print(new_str, end="")
+
+text_indentation("Holberton.school")
