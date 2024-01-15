@@ -5,11 +5,7 @@
 
 
 import unittest
-import importlib
-
-max_integer_module = importlib.import_module("6-max_integer")
-max_integer = max_integer_module.max_integer
-
+max_integer = __import__("6-max_integer").max_integer
 class TestMaxInt(unittest.TestCase):
 
     # Test for normal use case
