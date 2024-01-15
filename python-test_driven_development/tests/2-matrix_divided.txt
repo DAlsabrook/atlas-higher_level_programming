@@ -2,19 +2,43 @@
 
 >>> matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
-check div is not 0
+:: CHECK REAL USE
+>>> matrix_divided(matrix, 1)
+[[], [1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+
+>>> matrix_divided(matrix, -1)
+[[], [-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0], [-7.0, -8.0, -9.0]]
+
+>>> matrix_divided(matrix, 1.0)
+[[], [1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+
+:: CHECK DIV IS NOT 0
 >>> matrix_divided(matrix, 0)
 Traceback (most recent call last):
  ...
-ZeroDivisionError("division by zero")
+ZeroDivisionError: division by zero
 
-check div is not infinite
->>> matrix_divided(matrix, float(inf))
-
->>> matrix_divided(matrix, -float(inf))
-
-check div is not str
+:: CHECK DIV IS NOT STRING
 >>> matrix_divided(matrix, "string")
 Traceback (most recent call last):
  ...
-TypeError("div must be a number")
+TypeError: div must be a number
+
+:: CHECK BROKEN MATRIX (EMPTY)
+>>> matrix = []
+
+:: CHECK BROKEN MATRIX (EMPTY LISTS)
+>>> matrix = [[], [], []]
+
+:: CHECK MATRIX CONTAINING DIFFERENT LENGTH LISTS
+>>> matrix = [[1, 2, 3], [4, 5], [7]]
+
+:: CHECK BROKEN MATRIX (HAS STRING)
+>>> matrix = [[1, "string", 3], [4, 5, 6], [7, 8, 9]]
+
+:: CHECK BROKEN MATRIX (None)
+>>> matrix = None
+
+:: CHECK MATRIX CONTAINING 'INF' AND -'INF'
+>>> matrix = [[1, float('inf'), 3], [4, 5, 6], [7, 8, 9]]
+>>> matrix = [[1, -float('inf'), 3], [4, 5, 6], [7, 8, 9]]
