@@ -7,7 +7,8 @@ Module containing function for dividing a matrix by an int/float
 
 def matrix_divided(matrix, div):
     """
-    Function to divide a ful matrix by a given number
+    matrix_divided([[]], int)
+    Function to divide a full matrix by a given number
 
     Args:
         matrix ([[]]): Matrix of ints or floats and list of the same size
