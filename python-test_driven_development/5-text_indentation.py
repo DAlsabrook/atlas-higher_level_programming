@@ -28,5 +28,3 @@ def text_indentation(text):
         else:
             new_str += char
     print(new_str, end="")
-
-text_indentation("Holberton.school")
