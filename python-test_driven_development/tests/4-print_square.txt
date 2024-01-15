@@ -1,0 +1,53 @@
+>>> print_square = __import__('4-print_square').print_square
+
+:: NORMAL USE
+>>> print_square(3)
+###
+###
+###
+
+:: LESS THAN 0
+>>> print_square(-3)
+Traceback (most recent call last):
+ ...
+ValueError: size must be >= 0
+
+:: EQUALS 0
+>>> print_square(0)
+
+
+:: FLOAT
+>>> print_square(3.0)
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+:: INFINITY
+>>> print_square(float('inf'))
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+:: INFINITY
+>>> print_square(-float('inf'))
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+:: STRING PASSED IN
+>>> print_square("three")
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+:: NONE
+>>> print_square(None)
+Traceback (most recent call last):
+ ...
+TypeError: size must be an integer
+
+:: EMPTY
+>>> print_square()
+Traceback (most recent call last):
+ ...
+TypeError: print_square() missing 1 required positional argument: 'size'
