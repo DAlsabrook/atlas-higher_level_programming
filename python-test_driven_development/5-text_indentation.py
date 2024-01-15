@@ -20,11 +20,15 @@ def text_indentation(text):
     """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-
+    flag = 0
     new_str = ""
     for char in text:
+        if char.isspace() and flag == 1:
+            continue
         if char in ('.', '?', ':'):
             new_str += char + "\n\n"
+            flag = 1
         else:
             new_str += char
+            flag = 0
     print(new_str, end="")

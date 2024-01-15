@@ -4,12 +4,11 @@
 >>> text_indentation("This is a long string. It is to test? my: function.")
 This is a long string.
 <BLANKLINE>
- It is to test?
+It is to test?
 <BLANKLINE>
- my:
+my:
 <BLANKLINE>
- function.
-<BLANKLINE>
+function.
 <BLANKLINE>
 
 >>> text_indentation(2)
