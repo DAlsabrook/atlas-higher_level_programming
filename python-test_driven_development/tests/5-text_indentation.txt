@@ -1,0 +1,26 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+>>> text_indentation("This is a long string. It is to test? my: function.")
+This is a long string.
+<BLANKLINE>
+ It is to test?
+<BLANKLINE>
+ my:
+<BLANKLINE>
+ function.
+<BLANKLINE>
+<BLANKLINE>
+
+>>> text_indentation(2)
+Traceback (most recent call last):
+ ...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+ ...
+TypeError: text must be a string
+
+>>> text_indentation("this is a test with no special chars")
+this is a test with no special chars
