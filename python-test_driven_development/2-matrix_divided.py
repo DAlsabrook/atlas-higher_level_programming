@@ -22,7 +22,7 @@ def matrix_divided(matrix, div):
                     or div is not an int/float.
         ZeroDivisionError: If div is 0
     """
-    result = [[]]
+    result = []
     message = "matrix must be a matrix (list of lists) of integers/floats"
     # Check for each row of matrix being a list and
     # all elements in rows being an int or float

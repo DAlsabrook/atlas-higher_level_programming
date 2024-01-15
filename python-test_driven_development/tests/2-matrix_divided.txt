@@ -4,17 +4,17 @@
 
 :: CHECK REAL USE
 >>> matrix_divided(matrix, 1)
-[[], [1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
 
 >>> matrix_divided(matrix, -1)
-[[], [-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0], [-7.0, -8.0, -9.0]]
+[[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0], [-7.0, -8.0, -9.0]]
 
 >>> matrix_divided(matrix, 1.0)
-[[], [1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
 
  matrix = [[1, 2.5], [3.5, 4]]
 >>> matrix_divided(matrix, 1)
-[[], [1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
 
 :: CHECKS FOR DIV VARIABLE
 :: CHECK DIV IS NOT 0
@@ -34,12 +34,12 @@ TypeError: div must be a number
 :: CHECK BROKEN MATRIX (EMPTY)
 >>> matrix = []
 >>> matrix_divided(matrix, 1)
-[[]]
+[]
 
 :: CHECK BROKEN MATRIX (EMPTY LISTS)
 >>> matrix = [[], [], []]
 >>> matrix_divided(matrix, 1)
-[[], [], [], []]
+[[], [], []]
 
 :: CHECK MATRIX CONTAINING DIFFERENT LENGTH LISTS
 >>> matrix = [[1, 2, 3], [4, 5], [7]]
@@ -65,11 +65,11 @@ TypeError: 'NoneType' object is not iterable
 :: CHECK MATRIX CONTAINING 'INF' AND -'INF'
 >>> matrix = [[1, float('inf'), 3], [4, 5, 6], [7, 8, 9]]
 >>> matrix_divided(matrix, 1)
-[[], [1.0, inf, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+[[1.0, inf, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
 
 >>> matrix = [[1, -float('inf'), 3], [4, 5, 6], [7, 8, 9]]
 >>> matrix_divided(matrix, 1)
-[[], [1.0, -inf, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
+[[1.0, -inf, 3.0], [4.0, 5.0, 6.0], [7.0, 8.0, 9.0]]
 
 :: CHECK MATRIX CONTAINING NO LIST
 >>> matrix = [1, 2, 3]
