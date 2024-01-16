@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import sys
+import subprocess
 
 def is_safe(board, row, col, n):
     # Check if there is a queen in the same row on the left
