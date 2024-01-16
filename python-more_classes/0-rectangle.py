@@ -5,4 +5,6 @@ Module to define a class for rectangle creation
 
 
 class Rectangle:
-    pass
+
+    def __init__(self):
+        pass
