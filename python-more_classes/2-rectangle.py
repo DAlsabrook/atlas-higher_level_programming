@@ -5,7 +5,19 @@ Module to define a class for rectangle creation
 
 
 class Rectangle:
-    """Rectangle is a class to create and print a rectangle"""
+    """
+    Rectangle is a class to create and print a rectangle
+
+    Attributes:
+        Width (int): Width of rectangle
+        Height (int): Height of rectangle
+
+    Methods:
+        width((int)value): value used for setting width of an instance
+        height((int)value): value used to set the height of an instance
+        area(): Returns the height * width
+        perimeter(): Returns the perimeter if height and width are > 0
+    """
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
