@@ -80,4 +80,5 @@ class Rectangle:
         return rect.rstrip()
 
     def __repr__(self):
+        """ Method to give str representation of object for eval()"""
         return f"Rectangle({self.__width}, {self.__height})"
