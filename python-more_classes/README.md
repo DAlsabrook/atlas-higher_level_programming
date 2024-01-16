@@ -13,6 +13,7 @@ Each file builds on the one before until we have a fully completed class that
 follows these set of guidlines:
 
 Private instance attribute: width:
+
 property def width(self): to retrieve it
 property setter def width(self, value): to set it:
 width must be an integer, otherwise raise a TypeError exception with the message width must be an integer
