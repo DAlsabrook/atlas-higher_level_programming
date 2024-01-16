@@ -10,7 +10,7 @@ a height, width, number of instances, be able to print the rectangle.
 We will also make methods for getting the area and perimeter of any rectangle.
 
 Each file builds on the one before until we have a fully completed class that
-follows these set of guidlines:
+follows these set of guidelines:
 
 * Private instance attribute: width:
 
