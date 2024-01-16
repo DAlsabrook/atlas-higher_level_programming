@@ -79,6 +79,7 @@ follows these set of guidelines:
 
 ### Files
 
+* [0-rectangle](0-rectangle.py)
 * [1-rectangle](1-rectangle.py)
 * [2-rectangle](2-rectangle.py)
 * [3-rectangle](3-rectangle.py)
