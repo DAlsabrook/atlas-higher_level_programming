@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import sys
-import subprocess
 
 def is_safe(board, row, col, n):
     # Check if there is a queen in the same row on the left
@@ -48,10 +47,13 @@ def solve_nqueens(n):
 
 def print_solution(board):
     n = len(board)
+    solution = []
     for i in range(n):
         for j in range(n):
-            print("Q" if board[i][j] == 1 else ".", end=" ")
-        print()
+            if board[i][j] == 1:
+                solution.append([i, j])
+    solution.sort()
+    print(solution)
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
