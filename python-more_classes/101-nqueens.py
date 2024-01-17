@@ -6,6 +6,7 @@ def is_safe(board, row, col, n):
     for i in range(col):
         if board[row][i] == 1:
             return False
+        
 
     # Check if there is a queen in the upper diagonal on the left
     for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
