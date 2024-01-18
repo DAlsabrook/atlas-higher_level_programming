@@ -2,7 +2,11 @@
     "files.autoSave": "afterDelay",
     "editor.insertSpaces": true,
     "editor.rulers": [79],
+    "editor.renderWhitespace": "trailing",
     "workbench.colorCustomizations": {
-        "editorRuler.foreground": "#2c2c2c"
+        
+        "editorRuler.foreground": "#2c2c2c",
+        "editorWhitespace.foreground": "#ff0000",
+        "editorWhitespace.trailing.foreground": "#FF0000"
     }
 }
