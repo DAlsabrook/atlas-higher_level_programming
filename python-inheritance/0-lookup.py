@@ -10,7 +10,7 @@ def lookup(obj):
     methods available to a class or object
 
     Args:
-        obj: The class or object to look up attributes/methods
+        obj (object): The class or object to look up attributes/methods
 
     Returns: List of available attributes and methods
 
@@ -18,5 +18,5 @@ def lookup(obj):
         TypeError: When obj is not a class or object
     """
     if not isinstance(obj, object):
-        raise TypeError("Object is not a class or instance of a class")
+        raise TypeError("'obj' is not a class or instance of a class")
     return dir(obj)
