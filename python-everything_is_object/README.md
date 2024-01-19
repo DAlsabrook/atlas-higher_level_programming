@@ -210,7 +210,7 @@ and other python concepts
      a += [4]
 
      id(a)
-     
+
     Will the last line of this script print 139926795932424?
     * [28-answer](28-answer.txt)
 
