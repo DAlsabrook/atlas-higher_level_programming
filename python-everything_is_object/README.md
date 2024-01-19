@@ -23,23 +23,35 @@ and other python concepts
 * In the following code, do a and b point to the same object?
     * [5-answer](5-answer.txt)
 * What do these 3 lines print?
+
     s1 = "Best School"
+
     s2 = s1
+    
     print(s1 == s2)
     * [6-answer](6-answer.txt)
 * What do these 3 lines print?
+
     s1 = "Best"
+
     s2 = s1
+
     print(s1 is s2)
     * [7-answer](7-answer.txt)
 * What do these 3 lines print?
+
     s1 = "Best School"
+
     s2 = "Best School"
+
     print(s1 == s2)
     * [8-answer](8-answer.txt)
 * What do these 3 lines print?
+
     s1 = "Best School"
+
     s2 = "Best School"
+
     print(s1 is s2)
     * [9-answer](9-answer.txt)
 * question
