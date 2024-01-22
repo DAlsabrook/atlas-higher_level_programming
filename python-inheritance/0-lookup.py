@@ -13,8 +13,5 @@ def lookup(obj):
         obj (object): The class or object to look up attributes/methods
 
     Returns: List of available attributes and methods
-
-    Raises:
-        TypeError: When obj is not a class or object
     """
     return dir(obj)
