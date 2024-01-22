@@ -17,6 +17,4 @@ def lookup(obj):
     Raises:
         TypeError: When obj is not a class or object
     """
-    if not isinstance(obj, object):
-        raise TypeError("'obj' is not a class or instance of a class")
     return dir(obj)
