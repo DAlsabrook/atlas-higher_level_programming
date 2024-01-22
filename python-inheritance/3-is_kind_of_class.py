@@ -16,4 +16,8 @@ def is_kind_of_class(obj, a_class):
         True if related
         False if not
     """
-    return isinstance(a_class, obj)
+    if isinstance(a_class, obj):
+        if issubclass(a_class, obj):
+            return True
+    else:
+        return False
