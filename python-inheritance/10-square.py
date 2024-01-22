@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-Rectangle = __import__('9-rectangle').Rectangle
 """
 Module to hold the class for a square object
 """
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
