@@ -8,4 +8,5 @@ class BaseGeometry:
     """
     Class for simple base of geometry
     """
-    pass
+    def __init__(self) -> None:
+        pass
