@@ -10,4 +10,5 @@ def load_from_json_file(filename):
     Turn a JSON file into an object
     """
     with open(filename, "r") as file:
-        return json.loads(file)
+        obj = json.loads(file)
+    return obj
