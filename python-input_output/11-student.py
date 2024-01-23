@@ -42,4 +42,4 @@ class Student:
     def reload_from_json(self, json):
         """Takes dictionary(json) and sets class attributes using it"""
         for key, value in json:
-            setattr(self, key, json(value))
+            self.key = value
