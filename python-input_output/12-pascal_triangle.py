@@ -5,6 +5,12 @@ Module to contain a function for returning Pascal's triangle
 
 
 def pascal_triangle(n):
+    """
+    Function that creates pascal's triangle to the nth place
+
+        Args:
+            n (int): How many line to take the triangle to
+    """
     matrix = []
     if n <= 0:
         return []
