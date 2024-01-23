@@ -2,7 +2,6 @@
 """
 Module that contains a class for "student"
 """
-import json
 
 
 class Student:
