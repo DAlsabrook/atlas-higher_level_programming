@@ -36,3 +36,4 @@ def pascal_triangle(n):
                 continue
             tmp.append(x + y)
         matrix.append(tmp)
+    return matrix
