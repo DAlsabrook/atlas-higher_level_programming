@@ -6,7 +6,7 @@ Module that contains a class for BaseGeometry
 
 class BaseGeometry:
     """
-    Class for simple base of geometry
+    class for geometry
     """
     def __init__(self) -> None:
         pass

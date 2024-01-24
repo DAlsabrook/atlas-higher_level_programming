@@ -5,33 +5,39 @@ Module to define a class for rectangle creation
 
 
 class Rectangle:
-    """
-    Rectangle is a class to create and print a rectangle
+    """ _summary_
 
-    Class Attributes:
-        number_of_instances: Records how many objects have been made
-        print_symbol: changes the symbol the __str__ method uses to represent
-                        the rectangle
+    Raises:
+        TypeError: _description_
+        ValueError: _description_
+        TypeError: _description_
+        ValueError: _description_
+        TypeError: _description_
+        ValueError: _description_
+        TypeError: _description_
+        ValueError: _description_
+        TypeError: _description_
+        TypeError: _description_
 
-    Instance Attributes:
-        Width (int): Width of rectangle
-        Height (int): Height of rectangle
-
-    Methods:
-        width((int)value): value used for setting width of an instance
-        height((int)value): value used to set the height of an instance
-        area(self): Returns the height * width
-        perimeter(self): Returns the perimeter if height and width are > 0
-        bigger_or_equal(rectangle, rectangle): Returns bigger rectangle
-        square(cls, (int)size): returns a square the size of size
-        __str__():
-        __repr__(): Returns string representation of rectangle
-        __del__(): Prints message on delete
+    Returns:
+        _type_: _description_
     """
     number_of_instances = 0
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+        """_summary_
+
+        Args:
+            width (int, optional): _description_. Defaults to 0.
+            height (int, optional): _description_. Defaults to 0.
+
+        Raises:
+            TypeError: _description_
+            ValueError: _description_
+            TypeError: _description_
+            ValueError: _description_
+        """
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         elif width < 0:
@@ -84,7 +90,19 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """"Static method that compares objects and returns the bigger one"""
+        """Compares 2 rectangles
+
+        Args:
+            rect_1 (Rectangle): Rect to use
+            rect_2 (Rectangle): Rect to use
+
+        Raises:
+            TypeError: If rect_1 isnt a rectangle
+            TypeError: If rect_2 isnt a rectangle
+
+        Returns:
+            Rectangle: rect_1 if bigger or equal. rect_2 if bigger
+        """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         elif not isinstance(rect_2, Rectangle):
@@ -92,9 +110,10 @@ class Rectangle:
         return rect_1 if rect_1.area() >= rect_2.area() else rect_2
 
     def __str__(self):
-        """
-        Method to print the rectangle. print(str(object))
-        Also prints when instance is called print(object)
+        """__str__ give string representation of thing
+
+        Returns:
+            str: returns a str representation of the rectangle
         """
         rect = ""
         for row in range(self.__height):
