@@ -54,4 +54,31 @@ class Test_Rectangle(unittest.TestCase):
         x = Rectangle(2, 4)
         self.assertEqual(x.id, 3)
 
+    def test_setter_width(self):
+        """Width setter
+        """
+        x = Rectangle(2, 4)
+        x.width = 10
+        self.assertEqual(x.width, 10)
+
+    def test_setter_height(self):
+        """Height setter
+        """
+        x = Rectangle(2, 4)
+        x.height = 10
+        self.assertEqual(x.height, 10)
+
+    def test_setter_x(self):
+        """x setter
+        """
+        x = Rectangle(2, 4)
+        x.x = 10
+        self.assertEqual(x.x, 10)
+
+    def test_setter_y(self):
+        """y setter
+        """
+        x = Rectangle(2, 4)
+        x.y = 10
+        self.assertEqual(x.y, 10)
 
