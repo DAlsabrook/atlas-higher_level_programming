@@ -112,10 +112,17 @@ class Rectangle(Base):
         height = self.__height
         return f"[Rectangle] ({id}) {x}/{y} - {width}/{height}"
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """give the caller the ability to update multiple attributes at once
         """
         attributes = ['id', 'width', 'height', 'x', 'y']
-        for attr, arg in zip(attributes, args):
-            if arg is not None:
-                setattr(self, attr, arg)
+        if args:
+            # Loop to set args
+            for attr, arg in zip(attributes, args):
+                if arg is not None:
+                    setattr(self, attr, arg)
+        else:
+            # Loop to set kwargs
+            for attr, value in kwargs.items():
+                if attr in attributes:
+                    setattr(self, attr, value)
