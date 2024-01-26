@@ -11,6 +11,7 @@ class Test_Rectangle(unittest.TestCase):
 
         Rectangle(width, height, x, y, id)
     """
+    # Normal testing uses for class. Setting attributes through __init__
     def test_height(self):
         """Height given
         """
@@ -81,4 +82,12 @@ class Test_Rectangle(unittest.TestCase):
         x = Rectangle(2, 4)
         x.y = 10
         self.assertEqual(x.y, 10)
-    # need check for __validat_var, area
+    # Cases for the __validate_var Method. Checks for Type and Value errors
+
+    # Cases for area() method
+
+    # Cases for display() method - Used to print the rectangle
+
+    # Cases for the __str__ overwrite method - string representation
+        
+    # Cases for the update() method - to update multiple attributes at once
