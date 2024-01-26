@@ -13,8 +13,8 @@ class Rectangle(Base):
     Attributes:
         Width(int): how wide rect is
         Height(int): How high rect is
-        x(int): idk
-        y(int): idk
+        x(int): row to move the rect when displaying
+        y(int): column to move the rect when displaying
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
