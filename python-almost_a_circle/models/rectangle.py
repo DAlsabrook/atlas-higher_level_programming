@@ -88,4 +88,4 @@ class Rectangle(Base):
             else:
                 return True
         else:
-            raise TypeError(f"{name} must be integer")
+            raise TypeError(f"{name} must be an integer")
