@@ -81,4 +81,4 @@ class Test_Rectangle(unittest.TestCase):
         x = Rectangle(2, 4)
         x.y = 10
         self.assertEqual(x.y, 10)
-
+    # need check for __validat_var, area
