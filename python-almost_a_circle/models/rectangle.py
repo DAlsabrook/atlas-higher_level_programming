@@ -18,10 +18,14 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        if self.__validate_var("width", width, zero_allowed=False):
+            self.__width = width
+        if self.__validate_var("height", height, zero_allowed=False):
+            self.__height = height
+        if self.__validate_var("x", x, zero_allowed=True):
+            self.__x = x
+        if self.__validate_var("y", y, zero_allowed=True):
+            self.__y = y
 
     @property
     def width(self):
@@ -29,7 +33,8 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        self.__width = value
+        if self.__validate_var("width", value, False):
+            self.__width = value
 
     @property
     def height(self):
@@ -37,7 +42,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        self.__height = value
+        if self.__validate_var("height", value, False):
+            self.__height = value
 
     @property
     def x(self):
@@ -45,7 +51,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        self.__x = value
+        if self.__validate_var("x", value, True):
+            self.__x = value
 
     @property
     def y(self):
@@ -53,4 +60,32 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        self.__y = value
+        if self.__validate_var("y", value, True):
+            self.__y = value
+
+    def __validate_var(self, name, value, zero_allowed):
+        """Check on attributes to make sure they meet conditions
+
+        Args:
+            name (str): string name for the variable
+            value (int): variable itself
+
+        Raises:
+            ValueError: variable is not > 0
+            TypeError: variable is not int
+
+        Returns:
+            True if validated
+        """
+        if isinstance(value, int):
+            #Case for width and height
+            if not zero_allowed and value <= 0:
+                raise ValueError(f"{name} must be > 0")
+            #Case for x and y
+            elif zero_allowed and value < 0:
+                raise ValueError(f"{name} must be >= 0")
+            #Makes it to here then value is an int and correct range
+            else:
+                return True
+        else:
+            raise TypeError(f"{name} must be integer")
