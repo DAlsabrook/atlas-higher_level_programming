@@ -78,13 +78,13 @@ class Rectangle(Base):
             True if validated
         """
         if isinstance(value, int):
-            #Case for width and height
+            # Case for width and height
             if not zero_allowed and value <= 0:
                 raise ValueError(f"{name} must be > 0")
-            #Case for x and y
+            # Case for x and y
             elif zero_allowed and value < 0:
                 raise ValueError(f"{name} must be >= 0")
-            #Makes it to here then value is an int and correct range
+            # Makes it to here then value is an int and correct range
             else:
                 return True
         else:
