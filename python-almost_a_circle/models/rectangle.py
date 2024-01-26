@@ -18,13 +18,13 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
-        if self.__validate_var("width", width, zero_allowed=False):
+        if self.validate_var("width", width, zero_allowed=False):
             self.__width = width
-        if self.__validate_var("height", height, zero_allowed=False):
+        if self.validate_var("height", height, zero_allowed=False):
             self.__height = height
-        if self.__validate_var("x", x, zero_allowed=True):
+        if self.validate_var("x", x, zero_allowed=True):
             self.__x = x
-        if self.__validate_var("y", y, zero_allowed=True):
+        if self.validate_var("y", y, zero_allowed=True):
             self.__y = y
 
     @property
@@ -33,7 +33,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        if self.__validate_var("width", value, False):
+        if self.validate_var("width", value, False):
             self.__width = value
 
     @property
@@ -42,7 +42,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        if self.__validate_var("height", value, False):
+        if self.validate_var("height", value, False):
             self.__height = value
 
     @property
@@ -51,7 +51,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        if self.__validate_var("x", value, True):
+        if self.validate_var("x", value, True):
             self.__x = value
 
     @property
@@ -60,10 +60,10 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        if self.__validate_var("y", value, True):
+        if self.validate_var("y", value, True):
             self.__y = value
 
-    def __validate_var(self, name, value, zero_allowed):
+    def validate_var(self, name, value, zero_allowed):
         """Check on attributes to make sure they meet conditions
 
         Args:
