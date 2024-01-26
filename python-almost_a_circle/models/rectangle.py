@@ -115,8 +115,9 @@ class Rectangle(Base):
     def update(self, *args):
         """give the caller the ability to update multiple attributes at once
         """
-        self.id = args[0]
-        self.__width = args[1]
-        self.__height = args[2]
-        self.__x = args[3]
-        self.__y = args[4]
+        id_, width, height, x, y = args
+        self.id = id_
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
