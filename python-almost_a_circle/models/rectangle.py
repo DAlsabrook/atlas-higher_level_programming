@@ -111,3 +111,12 @@ class Rectangle(Base):
         width = self.__width
         height = self.__height
         return f"[Rectangle] ({id}) {x}/{y} - {width}/{height}"
+
+    def update(self, *args):
+        """give the caller the ability to update multiple attributes at once
+        """
+        args[0] = self.id
+        args[1] = self.__width
+        args[2] = self.__height
+        args[3] = self.__x
+        args[4] = self.__y
