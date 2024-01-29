@@ -31,11 +31,11 @@ class Square(Rectangle):
             self.width = value
             self.height = value
 
-        def update(self, *args, **kwargs):
+    def update(self, *args, **kwargs):
         """give the caller the ability to update multiple attributes at once
         using either args or kwargs
         """
-        attributes = ['id', 'width', 'height', 'x', 'y']
+        attributes = ['id', 'size', 'x', 'y']
         if args:
             # Loop to set args
             for attr, arg in zip(attributes, args):
