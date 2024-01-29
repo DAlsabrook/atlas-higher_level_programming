@@ -116,7 +116,7 @@ class Rectangle(Base):
         """give the caller the ability to update multiple attributes at once
         using either args or kwargs
         """
-        attributes = ['id', 'width', 'height', 'x', 'y']
+        attributes = ['id', 'size', 'x', 'y']
         if args:
             # Loop to set args
             for attr, arg in zip(attributes, args):

@@ -30,3 +30,19 @@ class Square(Rectangle):
         if self.validate_var("width", value, zero_allowed=False):
             self.width = value
             self.height = value
+
+        def update(self, *args, **kwargs):
+        """give the caller the ability to update multiple attributes at once
+        using either args or kwargs
+        """
+        attributes = ['id', 'width', 'height', 'x', 'y']
+        if args:
+            # Loop to set args
+            for attr, arg in zip(attributes, args):
+                if arg is not None:
+                    setattr(self, attr, arg)
+        else:
+            # Loop to set kwargs
+            for attr, value in kwargs.items():
+                if attr in attributes:
+                    setattr(self, attr, value)
