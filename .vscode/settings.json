@@ -1,11 +1,22 @@
 {
     "files.autoSave": "afterDelay",
     "editor.insertSpaces": true,
-    "editor.rulers": [79],
+    "editor.rulers": [
+        79
+    ],
     "editor.renderWhitespace": "trailing",
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#2c2c2c",
         "editorWhitespace.foreground": "#ff0000",
         "editorWhitespace.trailing.foreground": "#FF0000"
-    }
+    },
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./python-almost_a_circle",
+        "-p",
+        "*test*.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
 }

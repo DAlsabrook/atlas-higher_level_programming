@@ -2,6 +2,7 @@
 """Module to hold the class for a rectangle
 """
 from .base import Base
+import json
 
 
 class Rectangle(Base):
@@ -127,3 +128,7 @@ class Rectangle(Base):
             for attr, value in kwargs.items():
                 if attr in attributes:
                     setattr(self, attr, value)
+
+    def to_dictionary(self):
+        """Method to return dictionary definition of rect"""
+        return json.dumps(self)
