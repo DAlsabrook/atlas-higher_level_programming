@@ -48,7 +48,7 @@ class Square(Rectangle):
                     setattr(self, attr, value)
 
     def to_dictionary(self):
-        """Method to return dictionary definition of rect"""
+        """Method to return dictionary definition of square"""
         key_names = ["id", "size", "x", "y"]
         obj_dic = {}
 
