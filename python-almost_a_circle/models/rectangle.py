@@ -130,4 +130,19 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Method to return dictionary definition of rect"""
-        return self.__dict__
+        key_names = ["id", "width", "height", "x", "y"]
+        obj_dic = {}
+
+        for key in key_names:
+            if key == "id":
+                value = getattr(self, "id", None)
+            else:
+                value = getattr(self, f"_{type(self).__name__}__{key}", None)
+            if value is not None:
+                obj_dic[key] = value
+
+        return obj_dic
+
+a = Rectangle(2, 3)
+b = a.to_dictionary()
+print(b)
