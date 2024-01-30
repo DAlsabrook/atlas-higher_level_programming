@@ -142,7 +142,3 @@ class Rectangle(Base):
                 obj_dic[key] = value
 
         return obj_dic
-
-a = Rectangle(2, 3)
-b = a.to_dictionary()
-print(b)
