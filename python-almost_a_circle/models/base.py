@@ -25,7 +25,7 @@ class Base:
         Args:
             list_dictionaries (list): list of dictionaries
         """
-        if list_dictionaries is None or []:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
@@ -37,6 +37,9 @@ class Base:
             list_objs (object): instance of an inherited object
         """
         with open(f"{cls.__name__}.json", "w") as file:
-            if list_objs:
-                file.write(cls.to_json_string(list_objs))
+            if list_objs is None:
+                file.write("[]")
+            else:
+                list_dict = [obj.to_dictionary() for obj in list_objs]
+                file.write(cls.to_json_string(list_dict))
 
