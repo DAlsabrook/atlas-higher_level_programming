@@ -46,3 +46,18 @@ class Square(Rectangle):
             for attr, value in kwargs.items():
                 if attr in attributes:
                     setattr(self, attr, value)
+
+        def to_dictionary(self):
+            """Method to return dictionary definition of rect"""
+            key_names = ["id", "size", "x", "y"]
+            obj_dic = {}
+
+            for key in key_names:
+                if key == "id":
+                    value = getattr(self, "id", None)
+                else:
+                    value = getattr(self, f"_{type(self).__name__}__{key}", None)
+                if value is not None:
+                    obj_dic[key] = value
+
+            return obj_dic
