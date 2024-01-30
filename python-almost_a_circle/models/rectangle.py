@@ -131,4 +131,4 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Method to return dictionary definition of rect"""
-        return json.dumps(self)
+        return json.dumps(self.__dict__)
