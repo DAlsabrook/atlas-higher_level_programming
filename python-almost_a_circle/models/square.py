@@ -49,15 +49,16 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Method to return dictionary definition of square"""
-        key_names = ["id", "size", "x", "y"]
+        key_names = ["id", "width", "x", "y"]
         obj_dic = {}
 
         for key in key_names:
             if key == "id":
                 value = getattr(self, "id", None)
             else:
-                value = getattr(self, f"_{type(self).__name__}__{key}", None)
-            if value is not None:
+                value = getattr(self, f"_Rectangle__{key}", None)
+            if key == "width":
+                key = "size"
+            if key:
                 obj_dic[key] = value
-
         return obj_dic
