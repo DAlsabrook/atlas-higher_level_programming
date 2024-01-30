@@ -42,4 +42,3 @@ class Base:
             else:
                 list_dict = [obj.to_dictionary() for obj in list_objs]
                 file.write(cls.to_json_string(list_dict))
-
