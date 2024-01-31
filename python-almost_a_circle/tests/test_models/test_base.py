@@ -16,14 +16,23 @@ class Base_test(unittest.TestCase):
     def test_none(self):
         """Case for default None value given to class with no id given
         """
-        x = Base()
-        self.assertEqual(x.id, 1)
+        b1 = Base()
+        b2 = Base()
+        self.assertEqual(b1.id, b2.id - 1)
+
+    def test_three_bases(self):
+        b1 = Base()
+        b2 = Base()
+        b3 = Base()
+        self.assertEqual(b1.id, b3.id - 2)
+
+    def test_None_id(self):
+        b1 = Base(None)
+        b2 = Base(None)
+        self.assertEqual(b1.id, b2.id - 1)
 
     def test_given_id(self):
-        """Case for id given as argument
-        """
-        x = Base(4)
-        self.assertEqual(x.id, 4)
+        self.assertEqual(Base(4).id, 4)
 
     def test_negative(self):
         """Case for negative number given as id
