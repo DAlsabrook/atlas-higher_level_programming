@@ -158,3 +158,22 @@ class Test_Rectangle(unittest.TestCase):
         r1_dictionary = r1.to_dictionary()
         r2 = Rectangle.create(**r1_dictionary)
         self.assertNotEqual(r1, r2)
+
+    #save_to_file test
+    def test_save(self):
+        r = Rectangle(2, 3)
+        Rectangle.save_to_file([r])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(len(file.read()), 53)
+
+    def test_save_empty(self):
+        r = Rectangle(2, 3)
+        Rectangle.save_to_file([])
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(len(file.read()), 2)
+
+    def test_save_none(self):
+        r = Rectangle(2, 3)
+        Rectangle.save_to_file(None)
+        with open("Rectangle.json", "r") as file:
+            self.assertEqual(len(file.read()), 2)
