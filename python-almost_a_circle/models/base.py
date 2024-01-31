@@ -20,14 +20,30 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Returns JSON string representation of dict
+        """Take list of dictionaries
 
         Args:
             list_dictionaries (list): list of dictionaries
+
+        Returns:
+            JSON string representation of dict
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Takes a string representation of dictionary
+
+        Args:
+            json_string (str): string representation of dict
+
+        Returns: list of dict's
+        """
+        if not json_string:
+            return []
+        return json.loads(json_string)
 
     @classmethod
     def save_to_file(cls, list_objs):
