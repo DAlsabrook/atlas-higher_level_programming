@@ -5,6 +5,7 @@ import unittest
 from models.rectangle import Rectangle
 from unittest.mock import patch
 from io import StringIO
+import os
 
 class Test_Rectangle(unittest.TestCase):
     """Unit test for the Rectangle class
@@ -176,6 +177,7 @@ class Test_Rectangle(unittest.TestCase):
         Rectangle.save_to_file(None)
         with open("Rectangle.json", "r") as file:
             self.assertEqual("[]", file.read())
+        self.assertTrue(os.path.isfile("Rectangle.json"))
 
     def test_save_to_file_no_args(self):
         with self.assertRaises(TypeError):
