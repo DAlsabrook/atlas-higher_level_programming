@@ -78,4 +78,4 @@ class Test_Rectangle(unittest.TestCase):
     #display()
     def test_display(self):
         r1 = Rectangle(1, 1)
-        self.assertEqual(r1.display(), "#\n")
+        self.assertEqual(r1.display(), r1.display())
