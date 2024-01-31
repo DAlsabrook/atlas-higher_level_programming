@@ -3,7 +3,7 @@
 Module for unit test of the base class
 """
 import unittest
-from ...models.base import Base
+from models.base import Base
 
 
 class Test_Base(unittest.TestCase):
