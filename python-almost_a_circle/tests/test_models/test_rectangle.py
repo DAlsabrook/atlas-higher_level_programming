@@ -163,17 +163,20 @@ class Test_Rectangle(unittest.TestCase):
     #save_to_file test
     def test_save(self):
         r = Rectangle(2, 3)
+        filename = "Rectangle.json"
         Rectangle.save_to_file([r])
-        with open("Rectangle.json", "r") as file:
+        with open(filename, "r") as file:
             self.assertEqual(len(file.read()), 53)
+        os.remove(filename)
 
     def test_save_empty(self):
         r = Rectangle(2, 3)
+        filename = "Rectangle.json"
         Rectangle.save_to_file([])
-        with open("Rectangle.json", "r") as file:
+        with open(filename, "r") as file:
             self.assertEqual(file.read(), "[]")
+        os.remove(filename)
 
-    os.remove("Rectangle.json")
     def test_save_to_file_none_as_arg(self):
         Rectangle.save_to_file(None)
         filename = "Rectangle.json"
