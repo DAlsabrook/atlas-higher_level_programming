@@ -3,8 +3,6 @@
 """
 import unittest
 from ...models.rectangle import Rectangle
-from ...models.base import Base
-
 
 class Test_Rectangle(unittest.TestCase):
     """Unit test for the Rectangle class
@@ -89,5 +87,5 @@ class Test_Rectangle(unittest.TestCase):
     # Cases for display() method - Used to print the rectangle
 
     # Cases for the __str__ overwrite method - string representation
-        
+
     # Cases for the update() method - to update multiple attributes at once

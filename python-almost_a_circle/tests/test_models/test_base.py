@@ -14,8 +14,6 @@ class Test_Base(unittest.TestCase):
     """
 
     def test_empty(self):
-        """Case for default None value given to class with no id given
-        """
         b1 = Base()
         b2 = Base()
         self.assertEqual(b1.id, b2.id - 1)
@@ -35,14 +33,10 @@ class Test_Base(unittest.TestCase):
         self.assertEqual(Base(4).id, 4)
 
     def test_negative(self):
-        """Case for negative number given as id
-        """
         x = Base(-1)
         self.assertEqual(x.id, -1)
 
     def test_float(self):
-        """Case for float given as id
-        """
         x = Base(1.2)
         self.assertEqual(x.id, 1.2)
 
