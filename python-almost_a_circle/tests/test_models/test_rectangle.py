@@ -82,17 +82,25 @@ class Test_Rectangle(unittest.TestCase):
 
     #display()
     def test_display(self):
-        r1 = Rectangle(1, 1)
+        r1 = Rectangle(2, 2, 1, 1)
         with patch("sys.stdout", new_callable=StringIO) as stdout:
             r1.display()
             output = stdout.getvalue().strip()
-        expected_output = "#"
+        expected_output = "##\n ##"
         self.assertEqual(output, expected_output)
 
     def test_display_no_y(self):
-        r1 = Rectangle(1, 1, 1)
+        r1 = Rectangle(2, 2, 1, 0)
         with patch("sys.stdout", new_callable=StringIO) as stdout:
             r1.display()
             output = stdout.getvalue().strip()
-        expected_output = "#"
+        expected_output = "##\n ##"
+        self.assertEqual(output, expected_output)
+
+    def test_display_no_x(self):
+        r1 = Rectangle(2, 2, 0, 1)
+        with patch("sys.stdout", new_callable=StringIO) as stdout:
+            r1.display()
+            output = stdout.getvalue().strip()
+        expected_output = "##\n##"
         self.assertEqual(output, expected_output)
