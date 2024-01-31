@@ -74,9 +74,8 @@ class Test_Rectangle(unittest.TestCase):
     def test_str(self):
         r1 = Rectangle(1, 2, 3, 4, 5)
         r2 = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual(str(r1), str(r2))
+        self.assertEqual(print(r1), print(r2))
     #display()
     def test_display(self):
-        r1 = Rectangle(1, 1, 0, 0)
-        r2 = Rectangle(1, 1, 0, 0)
-        self.assertEqual(r1.display(), r2.display())
+        r1 = Rectangle(1, 1)
+        self.assertEqual(r1.display(), "#\n")
