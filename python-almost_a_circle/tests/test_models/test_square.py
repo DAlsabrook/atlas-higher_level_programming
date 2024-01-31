@@ -19,7 +19,7 @@ class Test_Square(unittest.TestCase):
 
     def test_two_args(self):
         s1 = Square(10, 2)
-        self.assertEqual(s1.id, 44)
+        self.assertEqual(s1.id, 46)
 
     def test_three_args(self):
         s1 = Square(10, 2, 2)
@@ -44,6 +44,14 @@ class Test_Square(unittest.TestCase):
     def test_neg(self):
         with self.assertRaises(ValueError):
             s = Square(-2)
+
+    def test_neg_two(self):
+        with self.assertRaises(ValueError):
+            s = Square(1, -2)
+
+    def test_neg_three(self):
+        with self.assertRaises(ValueError):
+            s = Square(1, 2, -2)
 
     #area()
     def test_area_small(self):
