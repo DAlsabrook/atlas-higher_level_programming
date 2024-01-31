@@ -85,7 +85,6 @@ class Test_Rectangle(unittest.TestCase):
         r1 = Rectangle(1, 1)
         with patch("sys.stdout", new_callable=StringIO) as stdout:
             r1.display()
-            expected_output = "##\n##\n##\n##"
             self.assertEqual(stdout.getvalue(), "#\n")
 
     def test_display_no_y(self):
@@ -101,3 +100,9 @@ class Test_Rectangle(unittest.TestCase):
             r1.display()
             expected_output = "\n####\n####\n####\n####\n####\n"
             self.assertEqual(stdout.getvalue(), expected_output)
+
+    #self.to_dictionary
+    def test_to_dictionary_output(self):
+        r = Rectangle(10, 2, 1, 9, 5)
+        correct = {'x': 1, 'y': 9, 'id': 5, 'height': 2, 'width': 10}
+        self.assertDictEqual(correct, r.to_dictionary())
