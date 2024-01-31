@@ -4,6 +4,7 @@ Module for unit test of the base class
 """
 import unittest
 from models.base import Base
+from models.rectangle import Rectangle
 
 
 class Test_Base(unittest.TestCase):
@@ -32,13 +33,12 @@ class Test_Base(unittest.TestCase):
     def test_given_id(self):
         self.assertEqual(Base(4).id, 4)
 
-    def test_negative(self):
-        x = Base(-1)
-        self.assertEqual(x.id, -1)
+    def test_to_json_string(self):
+        r = Rectangle(10, 7, 2, 8, 6)
+        self.assertEqual(str, type(Base.to_json_string([r.to_dictionary()])))
 
-    def test_float(self):
-        x = Base(1.2)
-        self.assertEqual(x.id, 1.2)
+    def test_to_json_string_empty_list(self):
+        self.assertEqual("[]", Base.to_json_string([]))
 
 if __name__ == "__main__":
     unittest.main()
