@@ -175,13 +175,14 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_save_to_file_none_as_arg(self):
         Rectangle.save_to_file(None)
+        filename = "Rectangle.json"
 
-        self.assertTrue(os.path.isfile("Rectangle.json"))
+        self.assertTrue(os.path.isfile(filename))
 
-        with open("Rectangle.json", "r") as file:
+        with open(filename, "r") as file:
             file_read = file.read()
             self.assertEqual("[]", file_read)
-        os.remove("Rectangle.json")
+        os.remove(filename)
 
     def test_save_to_file_no_args(self):
         with self.assertRaises(TypeError):
