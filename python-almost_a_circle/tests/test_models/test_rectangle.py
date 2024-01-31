@@ -174,6 +174,6 @@ class Test_Rectangle(unittest.TestCase):
 
     def test_save_none(self):
         r = None
-        Rectangle.save_to_file([r])
+        Rectangle.save_to_file(r)
         with open("Rectangle.json", "r") as file:
             self.assertEqual(len(file.read()), 2)
