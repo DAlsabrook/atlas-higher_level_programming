@@ -41,11 +41,19 @@ class Test_Rectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r1 = Rectangle(10, 2, 3, "4")
 
+    def test_two_arg_value_zero(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(0, 2)
+
+    def test_two_arg_value_zero_again(self):
+        with self.assertRaises(ValueError):
+            r1 = Rectangle(1, 0)
+
     def test_two_arg_value(self):
         with self.assertRaises(ValueError):
             r1 = Rectangle(-10, 2)
 
-    def test_two_arg_value(self):
+    def test_two_arg_value_again(self):
         with self.assertRaises(ValueError):
             r1 = Rectangle(10, -2)
 
