@@ -181,7 +181,7 @@ class Test_Rectangle(unittest.TestCase):
 
         with open(filename, "r") as file:
             file_read = file.read()
-            self.assertEqual("[]", file_read)
+            self.assertEqual(file_read, "[]")
         os.remove(filename)
 
     def test_save_to_file_no_args(self):
