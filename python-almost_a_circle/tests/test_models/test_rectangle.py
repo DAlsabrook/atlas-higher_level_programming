@@ -3,6 +3,8 @@
 """
 import unittest
 from models.rectangle import Rectangle
+from unittest.mock import patch
+from io import StringIO
 
 class Test_Rectangle(unittest.TestCase):
     """Unit test for the Rectangle class
@@ -70,12 +72,27 @@ class Test_Rectangle(unittest.TestCase):
     def test_area(self):
         r1 = Rectangle(1, 2)
         self.assertEqual(r1.area(), 2)
+
     #__str__ test
     def test_str(self):
-        r1 = Rectangle(1, 2, 3, 4, 5)
-        r2 = Rectangle(1, 2, 3, 4, 5)
-        self.assertEqual(print(r1), print(r2))
+        r1 = Rectangle(1, 2)
+        capture = str(r1)
+        correct = "[Rectangle] ({}) 0/0 - 1/2".format(r1.id)
+        self.assertEqual(correct, capture)
+
     #display()
     def test_display(self):
         r1 = Rectangle(1, 1)
-        self.assertEqual(r1.display(), r1.display())
+        with patch("sys.stdout", new_callable=StringIO) as stdout:
+            r1.display()
+            output = stdout.getvalue().strip()
+        expected_output = "#"
+        self.assertEqual(output, expected_output)
+
+    def test_display_no_y(self):
+        r1 = Rectangle(1, 1, 1)
+        with patch("sys.stdout", new_callable=StringIO) as stdout:
+            r1.display()
+            output = stdout.getvalue().strip()
+        expected_output = "#"
+        self.assertEqual(output, expected_output)
