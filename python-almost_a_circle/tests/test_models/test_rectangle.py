@@ -64,3 +64,19 @@ class Test_Rectangle(unittest.TestCase):
     def test_four_arg_value(self):
         with self.assertRaises(ValueError):
             r1 = Rectangle(10, 2, 3, -4)
+
+    #Test for methods in rect
+    #area() test
+    def test_area(self):
+        r1 = Rectangle(1, 2)
+        self.assertEqual(r1.area(), 2)
+    #__str__ test
+    def test_str(self):
+        r1 = Rectangle(1, 2, 3, 4, 5)
+        r2 = Rectangle(1, 2, 3, 4, 5)
+        self.assertEqual(str(r1), str(r2))
+    #display()
+    def test_display(self):
+        r1 = Rectangle(1, 1, 0, 0)
+        r2 = Rectangle(1, 1, 0, 0)
+        self.assertEqual(r1.display(), r2.display())
