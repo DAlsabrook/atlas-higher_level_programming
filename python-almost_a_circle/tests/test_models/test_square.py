@@ -2,7 +2,7 @@
 """
 Module to test the square class
 """
-from ...models.square import Square
+from models.square import Square
 import unittest
 
 
