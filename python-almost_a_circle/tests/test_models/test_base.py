@@ -6,14 +6,14 @@ import unittest
 from ...models.base import Base
 
 
-class Base_test(unittest.TestCase):
+class Test_Base(unittest.TestCase):
     """Class to run unit test on base class
 
     Args:
         unittest (object): class for running unit test
     """
 
-    def test_none(self):
+    def test_empty(self):
         """Case for default None value given to class with no id given
         """
         b1 = Base()
