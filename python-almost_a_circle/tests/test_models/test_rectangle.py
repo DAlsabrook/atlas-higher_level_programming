@@ -80,7 +80,7 @@ class Test_Rectangle(unittest.TestCase):
         correct = "[Rectangle] ({}) 0/0 - 1/2".format(r1.id)
         self.assertEqual(correct, capture)
 
-    #display()
+    #display() test
     def test_display_no_x_or_y(self):
         r1 = Rectangle(1, 1)
         with patch("sys.stdout", new_callable=StringIO) as stdout:
@@ -101,8 +101,35 @@ class Test_Rectangle(unittest.TestCase):
             expected_output = "\n####\n####\n####\n####\n####\n"
             self.assertEqual(stdout.getvalue(), expected_output)
 
-    #self.to_dictionary
+    #self.to_dictionary test
     def test_to_dictionary_output(self):
         r = Rectangle(10, 2, 1, 9, 5)
         correct = {'x': 1, 'y': 9, 'id': 5, 'height': 2, 'width': 10}
         self.assertDictEqual(correct, r.to_dictionary())
+
+    #self.update test
+    def test_update_kwargs_two(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(width=2, id=1)
+        self.assertEqual("[Rectangle] (1) 10/10 - 2/10", str(r))
+
+    def test_update_kwargs_three(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(width=2, height=3, id=89)
+        self.assertEqual("[Rectangle] (89) 10/10 - 2/3", str(r))
+
+    def test_update_kwargs_four(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(id=89, x=1, height=2, y=3, width=4)
+        self.assertEqual("[Rectangle] (89) 1/3 - 4/2", str(r))
+
+    def test_update_kwargs_five(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(y=5, x=8, id=99, width=1, height=2)
+        self.assertEqual("[Rectangle] (99) 8/5 - 1/2", str(r))
+
+    def test_update_kwargs_None_id(self):
+        r = Rectangle(10, 10, 10, 10, 10)
+        r.update(id=None)
+        correct = "[Rectangle] ({}) 10/10 - 10/10".format(r.id)
+        self.assertEqual(correct, str(r))
