@@ -4,6 +4,7 @@ Module to test the square class
 """
 from models.square import Square
 import unittest
+import os
 
 
 class Test_Square(unittest.TestCase):
@@ -86,3 +87,31 @@ class Test_Square(unittest.TestCase):
         r1_dictionary = r1.to_dictionary()
         r2 = Square.create(**r1_dictionary)
         self.assertEqual("[Square] (7) 1/2 - 5", str(r2))
+
+    #Test for saving to file
+    def test_save(self):
+        r = Square(2, 3)
+        filename = "Square.json"
+        Square.save_to_file([r])
+        with open(filename, "r") as file:
+            self.assertEqual(len(file.read()), 53)
+        os.remove(filename)
+
+    def test_save_empty(self):
+        r = Square(2, 3)
+        filename = "Square.json"
+        Square.save_to_file([])
+        with open(filename, "r") as file:
+            self.assertEqual(file.read(), "[]")
+        os.remove(filename)
+
+    def test_save_to_file_none_as_arg(self):
+        Square.save_to_file(None)
+        filename = "Square.json"
+
+        self.assertTrue(os.path.isfile(filename))
+
+        with open(filename, "r") as file:
+            file_read = file.read()
+            self.assertEqual(file_read, "[]")
+        os.remove(filename)
