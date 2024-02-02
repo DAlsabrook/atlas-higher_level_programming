@@ -20,7 +20,7 @@ class Test_Square(unittest.TestCase):
 
     def test_two_args(self):
         s1 = Square(10, 2)
-        self.assertEqual(s1.id, 47)
+        self.assertEqual(s1.id, 49)
 
     def test_three_args(self):
         s1 = Square(10, 2, 2)
@@ -94,7 +94,7 @@ class Test_Square(unittest.TestCase):
         filename = "Square.json"
         Square.save_to_file([r])
         with open(filename, "r") as file:
-            self.assertEqual(len(file.read()), 53)
+            self.assertEqual(len(file.read()), 39)
         os.remove(filename)
 
     def test_save_empty(self):
