@@ -79,3 +79,10 @@ class Test_Square(unittest.TestCase):
         capture = str(s)
         correct = "[Square] (1) 2/1 - 10"
         self.assertEqual(capture, correct)
+
+    #Test create method
+    def test_create_Square(self):
+        r1 = Square(5, 1, 2, 7)
+        r1_dictionary = r1.to_dictionary()
+        r2 = Square.create(**r1_dictionary)
+        self.assertEqual("[Square] (7) 1/2 - 5", str(r1))
