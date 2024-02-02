@@ -18,8 +18,8 @@ class Test_Square(unittest.TestCase):
             s = Square(0)
 
     def test_two_args(self):
-        s1 = Square(10, id=2)
-        self.assertEqual(s1.id, 2)
+        s1 = Square(10, 2)
+        self.assertEqual(s1.size, 10)
 
     def test_three_args(self):
         s1 = Square(10, 2, 2)
