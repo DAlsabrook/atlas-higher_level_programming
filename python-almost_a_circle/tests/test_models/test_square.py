@@ -20,7 +20,7 @@ class Test_Square(unittest.TestCase):
 
     def test_two_args(self):
         s1 = Square(10, 2)
-        self.assertEqual(s1.id, 49)
+        self.assertEqual(s1.id, 51)
 
     def test_three_args(self):
         s1 = Square(10, 2, 2)
@@ -115,3 +115,11 @@ class Test_Square(unittest.TestCase):
             file_read = file.read()
             self.assertEqual(file_read, "[]")
         os.remove(filename)
+
+    #load from file method test
+    def test_load_from_file_first_Square(self):
+        r1 = Square(10, 2, 8, 1)
+        r2 = Square(10, 2, 8, 1)
+        Square.save_to_file([r1, r2])
+        list_rectangles_output = Square.load_from_file()
+        self.assertEqual(str(r1), str(list_rectangles_output[0]))
