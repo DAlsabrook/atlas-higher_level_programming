@@ -73,3 +73,9 @@ class Test_Square(unittest.TestCase):
         s = Square(10, 10, 10, 10)
         with self.assertRaises(TypeError):
             s.to_dictionary(1)
+
+    def test_str_representation(self):
+        s = Square(10, 2, 1, 1)
+        capture = str(s)
+        correct = "[Square] (1) 2/1 - 10"
+        self.assertEqual(capture, correct)
