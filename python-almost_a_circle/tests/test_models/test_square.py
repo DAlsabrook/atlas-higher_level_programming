@@ -85,4 +85,4 @@ class Test_Square(unittest.TestCase):
         r1 = Square(5, 1, 2, 7)
         r1_dictionary = r1.to_dictionary()
         r2 = Square.create(**r1_dictionary)
-        self.assertEqual("[Square] (7) 1/2 - 5", str(r1))
+        self.assertEqual("[Square] (7) 1/2 - 5", str(r2))
