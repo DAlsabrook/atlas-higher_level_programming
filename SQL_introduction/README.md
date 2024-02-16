@@ -23,6 +23,8 @@ The `SQL_introduction` directory is a collection of SQL scripts designed to intr
 - [12-no_cheating](12-no_cheating.sql) - Ensures that a specific cheating criteria is not met in the data.
 - [13-change_class](13-change_class.sql) - Updates the class of certain records based on specified criteria.
 - [14-average](14-average.sql) - Calculates the average score from a table of scores.
+- [15-groups](15-groups.sql) - Counts the number of occurences of the score column and displays.
+- [16-no_link](16-no_link.sql) - Displays every row of the table where name is not null.
 
 ## Getting Started
 
