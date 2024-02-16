@@ -1,2 +1,2 @@
 -- Command to descripe a table
-DESCRIBE first_table;
+SHOW CREATE TABLE ${first_table}
