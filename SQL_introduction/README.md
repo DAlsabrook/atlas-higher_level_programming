@@ -8,21 +8,21 @@ The `SQL_introduction` directory is a collection of SQL scripts designed to intr
 
 ## Files Description
 
-- `0-list_databases.sql` - Lists all databases in the SQL server.
-- `1-create_database_if_missing.sql` - Creates a new database if it does not already exist.
-- `2-remove_database.sql` - Deletes a specified database from the SQL server.
-- `3-list_tables.sql` - Lists all tables within a specified database.
-- `4-first_table.sql` - Creates the first table with basic structure in a database.
-- `5-full_table.sql` - Creates a table with a complete set of columns and constraints.
-- `6-list_values.sql` - Lists all the values in a specific table.
-- `7-insert_value.sql` - Inserts a new row of data into a specified table.
-- `8-count_89.sql` - Counts the number of occurrences of the value '89' in a specified column.
-- `9-full_creation.sql` - Script for creating a database and populating it with tables and data.
-- `10-top_score.sql` - Queries the top score from a table of game scores.
-- `11-best_score.sql` - Finds the highest score and the player who achieved it.
-- `12-no_cheating.sql` - Ensures that a specific cheating criteria is not met in the data.
-- `13-change_class.sql` - Updates the class of certain records based on specified criteria.
-- `14-average.sql` - Calculates the average score from a table of scores.
+- [0-list_databases](0-list_databases.sql) - Lists all databases in the SQL server.
+- [1-create_database_if_missing](1-create_database_if_missing.sql) - Creates a new database if it does not already exist.
+- [2-remove_database](2-remove_database.sql) - Deletes a specified database from the SQL server.
+- [3-list_tables](3-list_tables.sql) - Lists all tables within a specified database.
+- [4-first_table](4-first_table.sql) - Creates the first table with basic structure in a database.
+- [5-full_table](5-full_table.sql) - Creates a table with a complete set of columns and constraints.
+- [6-list_values](6-list_values.sql) - Lists all the values in a specific table.
+- [7-insert_value](7-insert_value.sql) - Inserts a new row of data into a specified table.
+- [8-count_89](8-count_89.sql) - Counts the number of occurrences of the value '89' in a specified column.
+- [9-full_creation](9-full_creation.sql) - Script for creating a database and populating it with tables and data.
+- [10-top_score](10-top_score.sql) - Queries the top score from a table of game scores.
+- [11-best_score](11-best_score.sql) - Finds the highest score and the player who achieved it.
+- [12-no_cheating](12-no_cheating.sql) - Ensures that a specific cheating criteria is not met in the data.
+- [13-change_class](13-change_class.sql) - Updates the class of certain records based on specified criteria.
+- [14-average](14-average.sql) - Calculates the average score from a table of scores.
 
 ## Getting Started
 
