@@ -1,16 +1,32 @@
 ![Being holding the world of code](https://github.com/DAlsabrook/atlas-higher_level_programming/assets/112190470/725dc1cc-64bc-4e57-adc6-c3cd43e960be)
 
-# Directory Title
+# SQL Introduction
 
-python-SQL_introduction
+## Directory Overview
 
-## Description
+The `SQL_introduction` directory is a collection of SQL scripts designed to introduce the basics of SQL, including database and table operations, data manipulation, and querying techniques. These scripts are intended for beginners and aim to provide a hands-on approach to learning SQL.
 
-This is a directory for use in practicing CRUD with MySQL
+## Files Description
 
-### Files
+- `0-list_databases.sql` - Lists all databases in the SQL server.
+- `1-create_database_if_missing.sql` - Creates a new database if it does not already exist.
+- `2-remove_database.sql` - Deletes a specified database from the SQL server.
+- `3-list_tables.sql` - Lists all tables within a specified database.
+- `4-first_table.sql` - Creates the first table with basic structure in a database.
+- `5-full_table.sql` - Creates a table with a complete set of columns and constraints.
+- `6-list_values.sql` - Lists all the values in a specific table.
+- `7-insert_value.sql` - Inserts a new row of data into a specified table.
+- `8-count_89.sql` - Counts the number of occurrences of the value '89' in a specified column.
+- `9-full_creation.sql` - Script for creating a database and populating it with tables and data.
+- `10-top_score.sql` - Queries the top score from a table of game scores.
+- `11-best_score.sql` - Finds the highest score and the player who achieved it.
+- `12-no_cheating.sql` - Ensures that a specific cheating criteria is not met in the data.
+- `13-change_class.sql` - Updates the class of certain records based on specified criteria.
+- `14-average.sql` - Calculates the average score from a table of scores.
 
-*
+## Getting Started
+
+To get started with these SQL scripts, make sure you have a SQL server installed and running. Open your SQL management tool of choice, connect to your server, and begin executing the scripts in the order listed above to gradually build up your understanding of SQL operations.
 
 ## Author
 
