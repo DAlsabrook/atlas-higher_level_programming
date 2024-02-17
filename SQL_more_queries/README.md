@@ -1,4 +1,5 @@
 
+![Guy in server room](https://github.com/DAlsabrook/atlas-higher_level_programming/assets/112190470/b7834329-1e2d-4d8e-a601-54f59bac99e3)
 
 # SQL More Queries
 
