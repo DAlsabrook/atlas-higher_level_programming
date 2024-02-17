@@ -8,13 +8,13 @@ The SQL_advanced_queries directory encompasses a collection of SQL scripts tailo
 
 Here’s a brief overview of what each script category aims to achieve:
 
-User Management and Permissions: Scripts numbered from 0-privileges to 2-create_read_user focus on the foundational aspects of database security by creating users, defining their access levels, and ensuring that data can be securely read without unauthorized modifications.
+* User Management and Permissions: Scripts numbered from 0-privileges to 2-create_read_user focus on the foundational aspects of database security by creating users, defining their access levels, and ensuring that data can be securely read without unauthorized modifications.
 
-Data Integrity and Constraints: Files 3-force_name through 5-unique_id are dedicated to ensuring the integrity of the data stored within the database. These scripts implement various constraints to prevent invalid data entry and ensure uniqueness where necessary.
+* Data Integrity and Constraints: Files 3-force_name through 5-unique_id are dedicated to ensuring the integrity of the data stored within the database. These scripts implement various constraints to prevent invalid data entry and ensure uniqueness where necessary.
 
-Geographical Data Handling: The series from 6-states to 9-cities_by_state_join dives into managing and querying geographical data, including states and cities, with an emphasis on relational data management techniques such as JOINs and subqueries.
+* Geographical Data Handling: The series from 6-states to 9-cities_by_state_join dives into managing and querying geographical data, including states and cities, with an emphasis on relational data management techniques such as JOINs and subqueries.
 
-Entertainment Database Queries: Starting from 10-genre_id_by_show to 16-shows_by_genre, these scripts explore the entertainment domain, focusing on managing and analyzing data related to shows and genres. They include operations for categorizing shows, counting entries by category, and filtering data based on specific criteria like genre.
+* Entertainment Database Queries: Starting from 10-genre_id_by_show to 16-shows_by_genre, these scripts explore the entertainment domain, focusing on managing and analyzing data related to shows and genres. They include operations for categorizing shows, counting entries by category, and filtering data based on specific criteria like genre.
 
 This directory serves as a practical resource for SQL practitioners looking to expand their skills in database management, querying complex relationships, and ensuring data security and integrity. Whether you’re managing user access, enforcing data standards, or analyzing relational data, the SQL_advanced_queries directory provides a comprehensive toolkit for sophisticated database operations.
 
