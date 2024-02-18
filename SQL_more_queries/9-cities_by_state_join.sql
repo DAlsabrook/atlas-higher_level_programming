@@ -1,8 +1,6 @@
 -- list all cities in database
 SELECT cities.id, cities.name, states.name
 FROM
-    cities
-JOIN
-    states
+    cities LEFT JOIN states
 ORDER BY
     cities.id ASC;
