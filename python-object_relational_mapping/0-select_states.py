@@ -14,5 +14,4 @@ def sql_connect(user, pw, db_name):
                         database= db_name)
     print("Connected")
 
-print(f"{sys.argv[1]}, {sys.argv[2]}, {sys.argv[3]}")
 sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
