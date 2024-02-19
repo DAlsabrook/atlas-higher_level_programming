@@ -26,5 +26,6 @@ def name_with_n(user_name, password, dbase):
         print(row[2])
         if str(row[2]).startswith("N"):
             print(row)
+
     cur.close()
     db.close()
