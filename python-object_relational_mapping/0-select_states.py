@@ -16,7 +16,7 @@ def sql_connect(user, pw, db_name):
                         passwd= pw,
                         database= db_name)
     cur = db.cursor()
-    cur.execute("SELECT states FROM hbtn_0e_0_usa")
+    cur.execute("SHOW DATABASES")
 
 if __name__ == "__main__":
     sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
