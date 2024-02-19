@@ -14,11 +14,11 @@ def name_with_n(user_name, password, dbase):
         password (str): user password
         dbase (str): database to use
     """
-    db = MySQLdb.connect(host = "localhost",
-                         user = user_name,
-                         passwd = password,
-                         database = dbase,
-                         port = 3306)
+    db = MySQLdb.connect(host="localhost",
+                         user=user_name,
+                         passwd=password,
+                         database=dbase,
+                         port=3306)
     cur = db.cursor()
     cur.execute("SELECT * FROM states;")
     rows = cur.fetchall()
@@ -28,6 +28,7 @@ def name_with_n(user_name, password, dbase):
 
     cur.close()
     db.close()
+
 
 if __name__ == "__main__":
     name_with_n(sys.argv[1], sys.argv[2], sys.argv[3])
