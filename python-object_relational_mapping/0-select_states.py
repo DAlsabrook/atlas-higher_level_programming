@@ -14,4 +14,5 @@ def sql_connect(user, pw, db_name):
                         database= db_name)
     print("Connected")
 
-sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
+if __name__ == "__main__":
+    sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
