@@ -6,12 +6,13 @@ import MySQLdb
 import sys
 
 
-def sql_connect(user, pw, db_name):
+def sql_connect(usr, pw, db_name):
     """
     This is a method to import a database
     """
 
     db = MySQLdb.connect(host="localhost",
+                        user=usr,
                         port=3306,
                         passwd= pw,
                         database= db_name)
