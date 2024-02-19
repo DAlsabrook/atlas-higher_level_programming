@@ -12,10 +12,10 @@ def sql_connect(usr, pw, db_name):
     """
 
     db = MySQLdb.connect(host="localhost",
-                            user=usr,
-                            port=3306,
-                            passwd= pw,
-                            database= db_name)
+                         user=usr,
+                         port=3306,
+                         passwd=pw,
+                         database=db_name)
     cur = db.cursor()
     cur.execute("SELECT * FROM states;")
     rows = cur.fetchall()
