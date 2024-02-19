@@ -22,11 +22,12 @@ def name_with_n(user_name, password, dbase):
     cur = db.cursor()
     cur.execute("SELECT * FROM states;")
     rows = cur.fetchall()
-    print(f"Rows: {rows}")
     for row in rows:
-        print(row[2])
-        if str(row[2]).startswith("N"):
+        if str(row[1]).startswith("N"):
             print(row)
 
     cur.close()
     db.close()
+
+if __name__ == "__main__":
+    name_with_n(sys.argv[1], sys.argv[2], sys.argv[3])
