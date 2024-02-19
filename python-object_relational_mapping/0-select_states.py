@@ -2,7 +2,7 @@
 """
 This is a module to import a database and work with it
 """
-from MySQLdb
+import MySQLdb
 import sys
 
 
