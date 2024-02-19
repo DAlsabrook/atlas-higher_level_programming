@@ -1,4 +1,4 @@
-
+![Python MySQL Dolphin](https://github.com/DAlsabrook/atlas-higher_level_programming/assets/112190470/95509aa9-b8d8-4d62-b5db-5595376546ea)
 
 # Python Object Relational Mapping
 
