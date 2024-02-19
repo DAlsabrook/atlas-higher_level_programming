@@ -13,9 +13,10 @@ def sql_connect(user, pw, db_name):
 
     db = MySQLdb.connect(host="localhost",
                         port=3306,
-                        password= pw,
+                        passwd= pw,
                         database= db_name)
-    print(f"Still connected: {db}")
+    cur = db.cursor()
+    print(cur)
 
 if __name__ == "__main__":
     sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
