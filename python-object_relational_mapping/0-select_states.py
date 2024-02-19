@@ -18,6 +18,11 @@ def sql_connect(usr, pw, db_name):
                         database= db_name)
     cur = db.cursor()
     cur.execute("SELECT * FROM states;")
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+    cur.close()
+    db.close()
 
 if __name__ == "__main__":
     sql_connect(sys.argv[1], sys.argv[2], sys.argv[3])
