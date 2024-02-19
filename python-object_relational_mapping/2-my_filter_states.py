@@ -20,7 +20,8 @@ def find_state(username, password, dbase, searched):
                          passwd=password,
                          database=dbase)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states;")
+    table_name = "states"
+    cur.execute("SELECT * FROM {0} ORDER BY {0}.id ASC;".format(table_name))
     rows = cur.fetchall()
     for row in rows:
         if row[1] == searched:
