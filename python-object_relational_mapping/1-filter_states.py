@@ -20,7 +20,7 @@ def name_with_n(user_name, password, dbase):
                          database = dbase,
                          port = 3306)
     cur = db.cursor()
-    cur.execute("SELECT * FROM states")
+    cur.execute("SELECT * FROM states;")
     rows = cur.fetchall()
     print(f"Rows: {rows}")
     for row in rows:
