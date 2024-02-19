@@ -10,6 +10,7 @@ def sql_connect(user, pw, db_name):
     """
     This is a method to import a database
     """
+    
     print("Inside method")
     db=_mysql.connect(host="localhost",
                         port=3306,
