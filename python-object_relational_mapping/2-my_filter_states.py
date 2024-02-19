@@ -15,6 +15,7 @@ def find_state(username, password, dbase, searched):
         dbase (str): database to use
         searched (str): State to search database for
     """
+
     db = MySQLdb.connect(host="localhost",
                          user=username,
                          passwd=password,
