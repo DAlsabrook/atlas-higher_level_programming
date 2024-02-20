@@ -23,7 +23,7 @@ def list_cities_of_state(user_name, password, dbase, state_name):
     cur = db.cursor()
     if state_name in states:
         query = "SELECT cities.name\
-                    FROM states LEFT JOIN cities\
+                    FROM cities INNER JOIN states\
                     ON states.id = cities.state_id\
                     WHERE states.name = %s\
                     ORDER BY states.name ASC;"
