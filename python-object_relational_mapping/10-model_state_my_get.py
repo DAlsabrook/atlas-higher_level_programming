@@ -24,6 +24,6 @@ if __name__ == "__main__":
     rows=session.query(State).filter(State.name.ilike(f'%{state_name}%')).all()
 
     for row in rows:
-        print(f"{row.id}: {row.name}")
+        print(row.id)
 
     session.close()
