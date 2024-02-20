@@ -20,8 +20,8 @@ if __name__ == "__main__":
     DBsession = sessionmaker(bind=engine)
     session = DBsession()
 
-    rows = session.query(State).filter(State.name.contians('a', 'A')).all()
-    print(rows)
+    rows = session.query(State).filter(State.name.ilike('%a%')).all()
+
     for row in rows:
         print(f"{row.id}: {row.name}")
 
