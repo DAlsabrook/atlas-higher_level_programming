@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Module to delete all objects containing "a"
+Module to delete all objects containing the letter a
 """
 import sys
 from sqlalchemy import create_engine
