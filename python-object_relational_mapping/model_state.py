@@ -1,12 +1,11 @@
 #!/usr/bin/python3
 """
-Module to contain class of a state
+Module to hold a class for making a table named states
 """
-from SQLAlchemy import Column, Integer, String
-from SQLAlchemy.ext.declarative import declarative_base
-
-
+from sqlalchemy import Column, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
 Base = declarative_base()
+
 
 class State(Base):
     """
