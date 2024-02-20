@@ -20,6 +20,6 @@ if __name__ == "__main__":
     session = sessionmaker(bind=engine)
 
     row = session.query(State).first()
-    print(row)
+    print(f"{row.id}: {row.name}")
 
     session.close()
