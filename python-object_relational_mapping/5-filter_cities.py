@@ -30,9 +30,9 @@ def list_cities_of_state(user_name, password, dbase, state_name):
     else:
         return 0
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
-
+    cities = [row[0] for row in rows]
+    cities_str = ', '.join(cities)
+    print(cities_str)
     cur.close()
     db.close()
 
