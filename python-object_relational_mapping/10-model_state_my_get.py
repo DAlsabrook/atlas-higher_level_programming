@@ -23,7 +23,9 @@ if __name__ == "__main__":
 
     rows=session.query(State).filter(State.name.ilike(f'%{state_name}%')).all()
 
-    for row in rows:
-        print(row.id)
-
+    if rows:
+        for row in rows:
+            print(row.id)
+    else:
+        print("Not found")
     session.close()
