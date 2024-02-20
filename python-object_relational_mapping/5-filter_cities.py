@@ -14,22 +14,18 @@ def list_cities_of_state(user_name, password, dbase, state_name):
     password (str): user password
     dbase (str): database to use
     """
-    states = ["California", "Arizona", "Texas", "New York", "Nevada"]
     db = MySQLdb.connect(host="localhost",
                          user=user_name,
                          passwd=password,
                          database=dbase,
                          port=3306)
     cur = db.cursor()
-    if state_name in states:
-        query = "SELECT cities.name\
-                    FROM cities INNER JOIN states\
-                    ON states.id = cities.state_id\
-                    WHERE states.name = %s\
-                    ORDER BY states.name ASC;"
-        cur.execute(query, (state_name,))
-    else:
-        return 0
+    query = "SELECT cities.name\
+                FROM cities INNER JOIN states\
+                ON states.id = cities.state_id\
+                WHERE states.name = %s\
+                ORDER BY states.name ASC;"
+    cur.execute(query, (state_name,))
     rows = cur.fetchall()
     cities = [row[0] for row in rows]
     cities_str = ', '.join(cities)
