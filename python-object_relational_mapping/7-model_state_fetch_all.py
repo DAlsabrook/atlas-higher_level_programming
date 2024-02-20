@@ -3,7 +3,7 @@
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State  # Assuming model_state.py is correctly set up
+from model_state import Base, State
 
 
 if __name__ == "__main__":
@@ -11,7 +11,9 @@ if __name__ == "__main__":
     password = sys.argv[2]
     dbase = sys.argv[3]
 
-    engine = create_engine(f'mysql+mysqldb://{username}:{password}@localhost:3306/{dbase}')
+    engine = create_engine(
+        f'mysql+mysqldb://{username}:{password}@localhost:3306/{dbase}'
+        )
     Base.metadata.bind = engine
     DBSession = sessionmaker(bind=engine)
     session = DBSession()
