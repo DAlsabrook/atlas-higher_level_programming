@@ -25,7 +25,8 @@ def list_cities_of_state(user_name, password, dbase, state_name):
         query = "SELECT cities.name\
                     FROM states LEFT JOIN cities\
                     ON states.id = cities.state_id\
-                    WHERE states.name = %s;"
+                    WHERE states.name = %s\
+                    ORDER BY states.name ASC;"
         cur.execute(query, (state_name,))
     else:
         return 0
