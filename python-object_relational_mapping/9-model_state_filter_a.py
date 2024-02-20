@@ -20,7 +20,7 @@ if __name__ == "__main__":
     DBsession = sessionmaker(bind=engine)
     session = DBsession()
 
-    rows = session.query(State).filter(State.name.contians("a")).all()
+    rows = session.query(State).filter(State.name.contians('a')).all()
 
     for row in rows:
         print(f"{row.id}: {row.name}")
