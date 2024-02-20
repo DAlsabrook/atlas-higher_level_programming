@@ -21,7 +21,7 @@ if __name__ == "__main__":
     session = DBsession()
 
     rows = session.query(State).filter(State.name.contians('a', 'A')).all()
-
+    print(rows)
     for row in rows:
         print(f"{row.id}: {row.name}")
 
