@@ -17,7 +17,8 @@ if __name__ == "__main__":
         f'mysql+mysqldb://{username}:{password}@localhost:3306/{dbase}'
         )
     Base.metadata.bind = engine
-    session = sessionmaker(bind=engine)
+    DBsession = sessionmaker(bind=engine)
+    session = DBsession()
 
     row = session.query(State).order_by(State.id.asc()).first()
     print(f"{row.id}: {row.name}")
