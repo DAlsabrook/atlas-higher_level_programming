@@ -20,6 +20,7 @@ def find_state(username, password, dbase, searched):
                          user=username,
                          passwd=password,
                          database=dbase)
+
     cur = db.cursor()
     table_name = "states"
     cur.execute("SELECT * FROM {0} ORDER BY {0}.id ASC;".format(table_name))
