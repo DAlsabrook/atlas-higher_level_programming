@@ -19,7 +19,7 @@ if __name__ == "__main__":
     Base.metadata.bind = engine
     session = sessionmaker(bind=engine)
 
-    row = session.query(State).first()
+    row = session.query(State).order_by(State.id.asc()).first()
     print(f"{row.id}: {row.name}")
 
     session.close()
