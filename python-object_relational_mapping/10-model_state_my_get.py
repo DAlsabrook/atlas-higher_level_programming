@@ -21,7 +21,7 @@ if __name__ == "__main__":
     DBsession = sessionmaker(bind=engine)
     session = DBsession()
 
-    rows=session.query(State).filter(State.name.contains(str(state_name))).first()
+    rows=session.query(State).filter(State.name == state_name).first()
 
     if rows:
         for row in rows:
