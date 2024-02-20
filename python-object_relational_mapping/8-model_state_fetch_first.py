@@ -21,6 +21,9 @@ if __name__ == "__main__":
     session = DBsession()
 
     row = session.query(State).order_by(State.id.asc()).first()
-    print(f"{row.id}: {row.name}")
+    if row is not None:
+        print(f"{row.id}: {row.name}")
+    else:
+        print("Nothing")
 
     session.close()
