@@ -20,7 +20,7 @@ if __name__ == "__main__":
     DBsession = sessionmaker(bind=engine)
     session = DBsession()
 
-    session.delete(State).filter(State.name.ilike("%a%"))
+    session.query(State).filter(State.name.ilike("%a%")).delete(State)
 
     session.commit()
     session.close()
