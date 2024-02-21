@@ -5,6 +5,7 @@ Module to hold a class to define city
 from sqlalchemy import Column, Integer, String, ForeignKey
 from model_state import Base
 
+
 class City(Base):
     """
     Class to defin what a city is
