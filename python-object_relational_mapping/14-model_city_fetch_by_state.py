@@ -21,9 +21,9 @@ if __name__ == "__main__":
     DBsession = sessionmaker(bind=engine)
     session = DBsession()
 
-    rows = session.query(State).join(City).order_by(City.id.asc()).all()
+    rows = session.query(City).join(State).order_by(City.id.asc()).all()
 
     for row in rows:
-        print(f"{row.name}: ({City.id}) {City.name}")
+        print(f": ({row.id}) {row.name}")
 
     session.close()
