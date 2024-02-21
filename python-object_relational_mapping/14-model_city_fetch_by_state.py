@@ -24,6 +24,6 @@ if __name__ == "__main__":
     rows = session.query(City, State).join(State).order_by(City.id.asc()).all()
 
     for City, State in rows:
-        print(f"{State.id}: ({City.id}) {City.name}")
+        print(f"{State.name}: ({City.id}) {City.name}")
 
     session.close()
