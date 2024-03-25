@@ -5,7 +5,7 @@ const args = process.argv;
 
 if (isNaN(args[2])) {
   console.log('Not a number');
-  return;
+} else {
+  num = parseInt(args[2]);
+  console.log('My number: ' + num);
 }
-num = parseInt(args[2]);
-console.log('My number: ' + num);
