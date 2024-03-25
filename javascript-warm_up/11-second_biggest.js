@@ -7,7 +7,7 @@ if (!args[0]) {
 let largestNum = -Infinity;
 let secondLargest = -Infinity;
 for (const idx in args) {
-  const num = parseInt(args[idx])
+  const num = parseInt(args[idx]);
   if (num > largestNum) {
     secondLargest = largestNum;
     largestNum = num;
