@@ -1,8 +1,14 @@
 #!/usr/bin/node
 
-exports.Rectangle = class {
+class Rectangle {
   constructor(height, width) {
-    this.height = height;
-    this.width = width;
+    if (height > 0) {
+      this.height = height;
+    }
+    if (width > 0) {
+      this.width = width;
+    }
   }
-};
+}
+
+module.exports = Rectangle;
