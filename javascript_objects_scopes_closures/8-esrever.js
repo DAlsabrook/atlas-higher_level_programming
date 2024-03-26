@@ -6,4 +6,4 @@ exports.esrever = function (list) {
     reversedList.unshift(list[element]);
   }
   return reversedList;
-}
+};
