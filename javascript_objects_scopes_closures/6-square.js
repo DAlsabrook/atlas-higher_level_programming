@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const Square = require('./5-square');
+const square = require('./5-square');
 
-class Square extends Square {
+class Square extends square {
   constructor (size) {
     super(size, size);
   }
@@ -20,3 +20,8 @@ class Square extends Square {
 }
 
 module.exports = Square;
+
+const s1 = new Square(4);
+s1.charPrint();
+
+s1.charPrint('C');
