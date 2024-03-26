@@ -12,7 +12,7 @@ class Rectangle {
     const width = this.width;
     const height = this.height;
     const strToPrint = 'X'.repeat(width);
-    for (let row = 1; row < height; row++) {
+    for (let row = 0; row < height; row++) {
       console.log(strToPrint);
     }
   }
