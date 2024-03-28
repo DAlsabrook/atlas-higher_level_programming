@@ -1,17 +1,16 @@
 #!/usr/bin/node
 
-const fs = require("fs");
-process = require('process');
-args = process.argv;
+const fs = require('fs');
+const process = require('process');
+const args = process.argv;
 
 if (args[2]) {
-  file = args[2];
-  buffer = '';
+  const file = args[2];
   fs.readFile(file, function (err, data) {
     if (err) {
       console.log(err);
     } else {
       console.log(data.toString());
     }
-    });
+  });
 }
