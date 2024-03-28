@@ -7,8 +7,8 @@ const args = process.argv;
 if (args[2]) {
   request(args[2], function (error, response, body) {
     if (error) {
-      console.log(`Error: ${error}`);
+      console.log(error);
     }
-    console.log(`Code: ${response.statusCode}`);
+    console.log(`code: ${response.statusCode}`);
   });
 }
